@@ -1,0 +1,50 @@
+
+version: 2
+
+models:
+  - name: my_first_dbt_model_sd
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model_sd
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+  
+  - name: orders
+    description: "orders model"
+    columns:
+      - name: order_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: order_items
+    description: "order_items model"
+    columns:
+      - name: order_item_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: order_details
+    description: "orders and order_items de normalized model"
+    columns:
+      - name: order_item_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+
